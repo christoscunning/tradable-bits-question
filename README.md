@@ -44,14 +44,20 @@ Example, to run the test with 1,000,000 lines and with a chunk size of 1 MB:
 `./FindDupes 1000000 1048576`
 
 
-###### Program takes two arguments:
+#### Program takes two arguments:
 
 `NUM_LINES`: used to tell the program the names of the input and output files generated with `generate_test_data.py`.
 `MAX_CHUNK_SIZE`: the max amount of memory (in bytes) that each chunk should take up. Keep in mind there is also some overhead for the rest of the program required. This is just one portion of the overall memory used by the program.
 
 Note: the program expects to find the file `INPUT_test_data_x.txt` in the `./testing` directory. It will likewise output `SORTED_test_data_x.txt` and `OUTPUT_test_data_x.txt` in the `./testing` directory. x is the number of lines in the test data file.
 
-##### Checking results
+#### Generating test data
+
+`python ./generate_test_data.py <NUM_LINES>`
+
+Where NUM_LINES is the number of lines in the input random text file.
+
+#### Checking results
 
 After running the find duplicates program, the output can be checked by running the check_output.py python script:
 
