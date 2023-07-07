@@ -52,7 +52,9 @@ Where x is the number of lines in the test data file. Ex:
 ### Results
 Instead of a 1 TB sized file, a test file with 30,000,000 lines, which is 1 GB large can be used. In this scaled down test, the goal is to sort the file while using no more than 16 MB of memory. To accomplish this, a MAX_CHUNK_SIZE of 8 MB (or 8,388,608 bytes) is used. When running the program with /usr/bin/time, you can see that the program only uses approximately 12.36 MB of ram, which is within the acceptable limit.
 
-![Only 12.36 MB of memory used during 1 GB test](1GB_test_output.png "1 GB Test Output")
+![Only 12.36 MB of memory used during 1 GB test](./figures/1GB_test_output.png "1 GB Test Output")
+
+![1 GB test passed (found all duplicates)](./figures/1GB_test_passed.png "1 GB Test Passed")
 
 ## Question 2:
 **How long do you estimate the program above to take if one read/write of 1Mb  from disk takes 3ms? CPU processing time will be equal to disk IO time.**
@@ -72,4 +74,4 @@ Total time = Phase 1 time + Phase 2 time + Phase 3 time = 15,728,640 ms = 4 Hour
 
 
 ## External Merge Sort Visualized:
-![external merge sort figure](external_merge_sort_figure.png "External Merge Sort")
+![external merge sort figure](./figures/external_merge_sort_figure.png "External Merge Sort")
